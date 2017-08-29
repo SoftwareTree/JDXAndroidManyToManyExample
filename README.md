@@ -9,7 +9,7 @@ Some highlights:
 *	The object model consists of two inter-related POJO classes (User and Group).
 *	The many-to-many relationship among User and Group is realized using an intermediate join class (UserGroup).
 *	The collection of many objects may be a List, an array, or a Vector.
-*	The declarative mapping specification is simple, intuitive, non-intrusive, and succinct.  
+*	The declarative mapping specification (in the file .../res/raw/manytomany_example.jdx) is simple, intuitive, non-intrusive, and succinct.  
 *	API calls for CRUD operations are simple and flexible. They show the following features: 
     -	Deep query,	Shallow query
 *	JDXA provides handy utility methods for displaying an object or a list of objects.  
