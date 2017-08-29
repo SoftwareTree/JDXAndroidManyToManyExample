@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, JDXAndroidManyToManyExampleActivity!</string>
+    <string name="app_name">ManyToMany Example</string>
+    <string name="activity_title">JDX ManyToMany Example</string>
+    <string name="see_results">Here is the output of the JDX log:</string>
+    <string name="exit">Exit</string>
+</resources>

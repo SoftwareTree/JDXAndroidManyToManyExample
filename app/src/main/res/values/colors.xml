@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- #ff9800 Orange 500     RGB = 255, 152, 0 -->    
+    <color name="app_color">#ff9800</color>
+    <color name="bg_blue">#3152F9</color>
+</resources>

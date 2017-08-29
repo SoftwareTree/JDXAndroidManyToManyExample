@@ -1,0 +1,28 @@
+JDX_DATABASE JDX:jdbc:sqldroid://data//data/com.softwaretree.jdxandroidmanytomanyexample/databases/manytomany_example.db;USER=sa;PASSWORD=sa;JDX_DBTYPE=SQLITE;
+JDX_OBJECT_MODEL_PACKAGE com.softwaretree.jdxandroidmanytomanyexample.model
+;
+
+CLASS .UserGroup TABLE USER_GRP
+   PRIMARY_KEY uId gId
+;
+
+JOIN_COLLECTION_CLASS ListUsers COLLECTION_TYPE JAVACOLLECTION ELEMENT_CLASS .User JOIN_CLASS .UserGroup
+   PRIMARY_KEY gId
+   JOIN_KEY uId
+   ORDERBY uName
+;
+
+CLASS .Group TABLE GRP
+    PRIMARY_KEY gId
+    RELATIONSHIP users REFERENCES ListUsers BYVALUE WITH gId
+;
+
+JOIN_COLLECTION_CLASS VectorGroups COLLECTION_TYPE VECTOR ELEMENT_CLASS .Group JOIN_CLASS .UserGroup
+   PRIMARY_KEY uId
+   JOIN_KEY gId
+;
+
+CLASS .User TABLE USER
+    PRIMARY_KEY uId
+    RELATIONSHIP groups REFERENCES VectorGroups BYVALUE WITH uId
+;
